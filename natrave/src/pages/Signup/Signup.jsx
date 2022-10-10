@@ -1,5 +1,6 @@
-import { Input } from "../../components/Input"
-import { Icon } from "../../components/Icon"
+import { Icon } from '../../components/Icon'
+import { Input } from '../../components/Input'
+
 import logo from '../../assets/imgs/logo/logo-fundo-branco.svg'
 
 export const Singup = () => {
@@ -46,7 +47,14 @@ export const Singup = () => {
                     placeholder="Digite sua senha"
                 />
 
-                <button className="w-full text-center text-white bg-red-500 px-6 py-3 rounded-xl">Criar minha conta</button>
+                <Input
+                    type="password"
+                    name="password"
+                    label="Confirme a senha"
+                    placeholder="Digite sua senha novamente"
+                />
+
+                <a href='/dashboard' className="w-full block text-center text-white bg-red-500 px-6 py-3 rounded-xl">Criar minha conta</a>
             </form>
         </main>
     </div>

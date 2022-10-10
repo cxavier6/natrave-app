@@ -32,7 +32,7 @@ export const Login = () => {
                     placeholder="Digite sua senha"
                 />
 
-                <button className="w-full text-center text-white bg-red-500 px-6 py-3 rounded-xl">Entrar</button>
+                <a href="/dashboard" className="w-full block text-center text-white bg-red-500 px-6 py-3 rounded-xl">Entrar</a>
             </form>
         </main>
     </div>
