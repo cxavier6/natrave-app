@@ -7,7 +7,6 @@ const icons = {
     back, 
     arrowLeft,
     arrowRight,
-    back,
     profile
 }
 
