@@ -1,18 +1,15 @@
-import logoVinho from '../../assets/imgs/logo/logo-fundo-vinho.svg'
-import photo from '../../assets/imgs/imagem/img.png'
-
 function Home() {
   return (
     <div className="h-screen bg-red-700 text-white p-6 flex flex-col items-center space-y-6">
      
       <header className="container flex justify-center max-w-5xl p-4">
-        <img src={logoVinho} className="w-40" />
+        <img src="../../../public/imgs/logo/logo-fundo-vinho.svg" className="w-40" />
       </header>
 
       <div className="container max-w-5xl flex-1 p-4 flex flex-col items-center md:flex-row space-y-6 md:space-y-0 md:space-x-6">
 
         <div className="md: flex-1 flex justify-center">
-          <img src={photo} className="w-full max-w-md" />
+          <img src="../../../public/imgs/imagem/img.png" className="w-full max-w-md" />
         </div>
 
         <div className="md: flex-1 flex flex-col space-y-6">

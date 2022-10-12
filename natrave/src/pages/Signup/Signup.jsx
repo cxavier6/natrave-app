@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 import { Icon } from '../../components/Icon'
 import { Input } from '../../components/Input'
-
-import logo from '../../assets/imgs/logo/logo-fundo-branco.svg'
 
 export const Singup = () => {
   return (
     <div className="flex flex-col justify-center items-center">
         <header className="w-full flex justify-center p-4 border-b border-red-300">
-                <img src={logo} className="w-32 md:w-40" />
+                <Link to="/">
+                    <img src="../../../public/imgs/logo/logo-fundo-branco.svg" className="w-32 md:w-40" />
+                </Link>  
         </header>
 
         <main className="container max-w-xl p-4">
