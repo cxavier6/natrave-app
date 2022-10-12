@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
+
 import { Icon } from '../../components/Icon'
-import logo from '../../assets/imgs/logo/logo-fundo-vermelho.svg'
-import sui from '../../assets/imgs/bandeiras/sui.png'
-import cam from '../../assets/imgs/bandeiras/cam.png'
+import { Card } from '../../components/Card'
 
 export const Dashboard = () => {
   return (
-    <div>
+    <>
         <header className='bg-red-500 text-white p-4 px-20'>
             <div className='container max-w-7xl flex justify-between'>
-                <img src={logo} className='w-28 md:w-40'/>
+                
+                <Link to="/">
+                    <img src="../../../public/imgs/logo/logo-fundo-vermelho.svg" className='w-28 md:w-40'/>
+                </Link>
                 <a href="/profile">
                     <Icon name="profile" className='w-9'/>
                 </a>
@@ -16,7 +19,7 @@ export const Dashboard = () => {
             </div>
         </header>
 
-        <main>
+        <main className="space-y-2">
             <section id='header' className='bg-red-500 text-white p-4 px-20'>
                 <div className='container max-w-3xl space-y-2'>
                     <span>Olá, Camila</span>
@@ -24,24 +27,35 @@ export const Dashboard = () => {
                 </div>
             </section>
 
-            <section id='content' className='container max-w-3xl p-4 m-auto'>
-                <div className='rounded-xl border border-gray-300 text-center p-4 space-y-4'>
-                    <span className='text-sm md:text-base text-gray-700 font-bold'>7:00</span>
-                    
-                    <div className='flex space-x-4 justify-center items-center'>
-                        <span className='uppercase'>sui</span>
-                        <img src={sui}/>
-                        
-                        <input max={10} type="number" className='bg-red-300/[0.2] w-[55px] h-[55px] text-red-700 text-xl text-center'/>
-                        <span className='text-red-500 text-bold'>X</span>
-                        <input max={10} type="number" className='bg-red-300/[0.2] w-[55px] h-[55px] font-red-700 text-xl text-center'/>
+            <section id='content' className='container max-w-3xl p-4 m-auto space-y-4'>
 
-                        <img src={cam}/>
-                        <span className='uppercase'>cam</span>
-                    </div>
+                <div className='flex space-x-4 p-4 items-center justify-center font-bold'>
+                    <Icon name="arrowLeft" className="w-6 text-red-500"/>
+                    <span>24 de novembro</span>
+                    <Icon name="arrowRight" className="w-6 text-red-500"/>
                 </div>
+                
+                <div className='space-y-4'>
+                    <Card
+                        timeA={{ slug: 'sui' }}
+                        timeB={{ slug: 'cam' }}
+                        match={{ time: '7:00' }}
+                    />
+
+                    <Card
+                        timeA={{ slug: 'uru' }}
+                        timeB={{ slug: 'cor' }}
+                        match={{ time: '7:00' }}
+                    />
+
+                    <Card
+                        timeA={{ slug: 'por' }}
+                        timeB={{ slug: 'gan' }}
+                        match={{ time: '7:00' }}
+                    />
+                </div>
+                
             </section>
         </main>
-    </div>
-  )
-}
+    </> 
+  )}
